@@ -364,6 +364,7 @@ def api_tasks():
     with _tasks_lock:
         return JSONResponse({tid: dict(data) for tid, data in _tasks.items()})
     
+# Adding comments to test Git Push
 @app.get("/api/progress/{task_id}")
 def api_progress(task_id: str):
     try:
